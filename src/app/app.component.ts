@@ -91,13 +91,13 @@ export class AppComponent {
     if(this.filters == "types"){
       var typesArr : any[] = address[this.filters];
       typesArr.forEach(val => {
-        if(val == this.searchText){
+        if(val.toLowerCase() == this.searchText.toLowerCase()){
           resArr.push(address);
         }
       })
     }else{
 
-      if(address[this.filters] == this.searchText){
+      if(address[this.filters].toLowerCase() == this.searchText.toLowerCase()){
         resArr.push(address)
       }
 
